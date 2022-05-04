@@ -1,3 +1,4 @@
+# ADDED this to fix user_url error, also configured devise.rb
 class TurboDeviseController < ApplicationController
   class Responder < ActionController::Responder
     def to_turbo_stream
