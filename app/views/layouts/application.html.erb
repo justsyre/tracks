@@ -15,8 +15,14 @@
 
   <body>
     <main>
-      <%= render 'layouts/navbar' %>
-      <%= yield %>
+      <header>
+        <%= render 'layouts/navbar' %>
+      </header>
+
+      <div class="container">
+        <%= render 'layouts/alerts' %>
+        <%= yield %>
+      </div>
     </main>
 
     <%# BOOTSTRAP CDN JS %>
