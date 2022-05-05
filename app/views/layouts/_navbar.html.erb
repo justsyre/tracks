@@ -6,32 +6,8 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-      <form class="w-100 me-3">
-        <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
-      </form>
-
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <%= link_to "Projects", projects_path, class:"nav-link active" %>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-
-      <ul class="navbar-nav">
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Profile
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Notification</a></li>
-              <li><a class="dropdown-item" href="#">Messages</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Login</a></li>
-            </ul>
-          </li>
+      <ul class="navbar-nav ms-auto">
+        <%= render 'user/session_manager' %>
       </ul>
     </div>
   </div>

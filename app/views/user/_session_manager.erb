@@ -1,0 +1,28 @@
+<% if current_user %>
+  <%# Show this if Current user is login %>
+  <li class="nav-item">
+    <%= link_to "Projects", projects_path, class:"nav-link active" %>
+  </li>
+
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Profile
+    </a>
+    <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="navbarDropdown">
+      <li><a class="dropdown-item" href="#">Notification</a></li>
+      <li><a class="dropdown-item" href="#">Messages</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><%= button_to "Sign out", destroy_user_session_path, method: :delete, class:"dropdown-item" %></li>
+    </ul>
+  </li>
+
+<% else %>
+  <%# Show this if User is not Login %>
+  <li class="nav-item">
+    <%= link_to "Create an Account", new_user_registration_path, class:"nav-link" %>
+  </li>
+  <li class="nav-item">
+    <%= link_to "Sign in", new_user_session_path, class:"nav-link" %>
+  </li>
+
+<% end %>

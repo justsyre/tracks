@@ -1,10 +1,18 @@
-<div id="<%= dom_id project %>">
-  <h2>
+<tr>
+  <th scope="row"> 
+    <%= project.id %> 
+  </th>
+  
+  <td>
     <%= project.title %>
-  </h2>
+  </td>
 
-  <div>
+  <td>
     <%= project.description %>
-  </div>
+  </td>
 
-</div>
+  <td>
+    <%= link_to "Show this project", project %>
+  </td>
+
+</tr>

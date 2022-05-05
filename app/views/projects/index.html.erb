@@ -3,15 +3,24 @@
 <div class="container">
   <h1>Projects</h1>
 
-  <div id="projects">
-    <% @projects.each do |project| %>
-      <%= render project %>
-      <p>
-        <%= link_to "Show this project", project %>
-      </p>
-    <% end %>
-  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col"> # </th>
+        <th scope="col"> Project </th>
+        <th scope="col"> Description </th>
+        <th scope="col"> Action </th>
+      </tr>
+    </thead>
 
-  <%= link_to "New project", new_project_path %>
+    <tbody>
+      <% @projects.each do |project| %>
+        <%= render project %>
+      <% end %>
+    </tbody>
+
+  </table>
+
+  <%= link_to "New Project", new_project_path %>
 
 </div>
