@@ -1,0 +1,16 @@
+<%= form.fields_for team.members.build do |form_member| %>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col"> Email </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="col">
+        <%= form.collection_select :user_id, User.order(:id), :id, :email, include_blank: true %>
+      </th>
+    </tr>
+  </tbody>
+</table>
+<% end %>    
